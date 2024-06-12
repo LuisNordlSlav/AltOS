@@ -76,3 +76,23 @@ void print_str(char* str) {
 void print_set_colour(uint8_t foreground, uint8_t background) {
     colour = foreground + (background << 4);
 }
+
+
+void set_char_at(uint8_t x, uint8_t y, char c) {
+    // Check if the coordinates are within bounds
+    if (x >= NUM_COLS || y >= NUM_ROWS) {
+        // Coordinates out of bounds, do nothing
+        return;
+    }
+
+    // Calculate the index in the buffer for the given coordinates
+    size_t index = y * NUM_COLS + x;
+
+    // Set the character and color at the calculated index
+    buffer[index].character = c;
+    buffer[index].colour = colour;
+}
+
+void print_str_at(uint8_t x, uint8_t y, char* str) {
+    
+}

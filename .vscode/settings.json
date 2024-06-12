@@ -3,6 +3,7 @@
         "stdint.h": "c",
         "display.h": "c",
         "stddef.h": "c",
-        "idt.h": "c"
+        "idt.h": "c",
+        "graphics.h": "c"
     }
 }

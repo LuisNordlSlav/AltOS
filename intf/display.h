@@ -2,8 +2,7 @@
 #define __DISPLAY_H__
 
 // Includes
-#include <stdint.h>
-#include <stddef.h>
+#include "types.h"
 
 // Types
 enum {
@@ -35,5 +34,7 @@ void print_clear();
 void print_char(char c);
 void print_str(char* s);
 void print_set_colour(uint8_t foreground, uint8_t background);
+void set_char_at(uint8_t x, uint8_t y, char c);
+void print_str_at(uint8_t x, uint8_t y, char* str);
 
 #endif
